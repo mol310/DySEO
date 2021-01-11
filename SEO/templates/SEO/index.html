@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>JOSHUA'S SEARCH ENGINE OPTIMIZER</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../../static/homepage_css.css">
+    </head>
+
+    <script src="script.js"></script>
+
+    <body>
+        <h1>NAVER SEARCH ENGINE OPTIMIZER</h1>
+        <div class="menu">
+            <div class="margin_style">
+                <a href="{% url 'index' %}">HOME</a>
+                <a href="{% url 'information' %}">INFORMATION</a>
+                <a href="{% url 'history' %}">HISTORY</a>
+                <a href="{% url 'searchengineoptimizer' %}">SEO</a>
+<!--                <a href="{% url 'make_plot' %}">plot</a>-->
+<!--                <a href="{% url 'test' %}">TEST</a>-->
+            </div>
+        </div>
+        
+
+        <div>
+            <h2>This page is for NAVER SHOPPING SEO</h2>
+            <h2>This Homepage is made by JOSHUA</h2>
+            <p>If you have any Questions, send me a message.</p>
+            <p>joshuajeon97@gmail.com</p>
+            {{ time_now }}<br>
+        </div>
+
+        <div>
+            <hr>
+            <footer>
+                <p>Posted by: Joshua Jeon</p>
+                <p><time pubdate datetime="2018-11-21"></time></p>
+            </footer>
+        </div>
+    </body>
+</html>

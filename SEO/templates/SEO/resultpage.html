@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<script>
+    function checkIt(){
+        if (document.getElementById(myinput).value){
+            alert("비밀번호를 입력하지 않았습니다.");
+            document.myForm.focus();
+            return false;
+        }
+
+    }
+    </script>
+    <script>
+    function button1_click() {
+
+        def ;
+    }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script>
+        function printrr(qwe) {
+            console.log(qwe);
+            window.onload = function () {
+
+                var chart = new CanvasJS.Chart("chartContainer", {
+                    animationEnabled: true,
+                    theme: "light2", // "light1", "light2", "dark1", "dark2"
+                    title: {
+                        text: "SEO RESULT"
+                    },
+                    axisY: {
+                        title: "ELU"
+                    },
+                    data: [{
+                        type: "column",
+                        showInLegend: true,
+                        legendMarkerColor: "grey",
+                        legendText: "ELU = Higher is the better",
+                        dataPoints: qwe
+
+                    }]
+                });
+
+                chart.render();
+
+            }
+        }
+    </script>
+    <head>
+        <title>JOSHUA'S SEARCH ENGINE OPTIMIZER</title>
+        <link rel="stylesheet" href="../../static/homepage_css.css">
+    </head>
+
+<!--    <script src="script.js"></script>-->
+
+    <body>
+        <h1>NAVER SEARCH ENGINE OPTIMIZER</h1>
+        <div class="menu">
+            <div class="margin_style">
+                <a href="{% url 'index' %}">HOME</a>
+                <a href="{% url 'information' %}">INFORMATION</a>
+                <a href="{% url 'history' %}">HISTORY</a>
+                <a href="{% url 'searchengineoptimizer' %}">SEO</a>
+            </div>
+        </div>
+        <form id="myform"method="POST">
+            {% csrf_token %}
+            <div>
+                Keyword : {{input_word}}
+<!--                <input id="myinput" name="myinput" type="submit" onsubmit="return button1_click()">-->
+            </div>
+        </form>
+
+        <div>
+<!--            var list_from_keyword = [{ y: 300878, label: "Venezuela" }]-->
+<!--            <canvas id="myCanvas"></canvas>-->
+<!--            <script type="text/javascript" src="script.js"></script>-->
+        </div>
+
+        <div>
+            <div id="chartContainer" style="height: 370px; width: 100%;"></div>
+            <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+            <script>printrr({{ff|safe}});</script>
+        </div>
+        <div>
+            <hr>
+            <footer>
+                <p>Posted by: Joshua Jeon</p>
+                <p><time pubdate datetime="2018-11-21"></time></p>
+            </footer>
+        </div>
+    </body>
+</html>

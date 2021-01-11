@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<script>
+    function checkIt(){
+        if (document.getElementById(myinput).value){
+            alert("비밀번호를 입력하지 않았습니다.");
+            document.myForm.focus();
+            return false;
+        }
+
+    }
+    </script>
+    <script>
+    function button1_click() {
+
+        def ;
+    }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script>
+        function printrr(qwe) {
+            console.log(qwe);
+            window.onload = function () {
+
+                var chart = new CanvasJS.Chart("chartContainer", {
+                    animationEnabled: true,
+                    theme: "light2", // "light1", "light2", "dark1", "dark2"
+                    title: {
+                        text: "SEO RESULT"
+                    },
+                    axisY: {
+                        title: "ELU"
+                    },
+                    data: [{
+                        type: "column",
+                        showInLegend: true,
+                        legendMarkerColor: "grey",
+                        legendText: "MMbbl = one million barrels",
+                        dataPoints: qwe
+
+                    }]
+                });
+
+                chart.render();
+
+            }
+        }
+    </script>
+    <head>
+        <title>JOSHUA'S SEARCH ENGINE OPTIMIZER</title>
+        <link rel="stylesheet" href="../../static/homepage_css.css">
+    </head>
+
+<!--    <script src="script.js"></script>-->
+
+    <body>
+        <h1>NAVER SEARCH ENGINE OPTIMIZER</h1>
+        <div class="menu">
+            <div class="margin_style">
+                <a href="{% url 'index' %}">HOME</a>
+                <a href="{% url 'information' %}">INFORMATION</a>
+                <a href="{% url 'history' %}">HISTORY</a>
+                <a href="{% url 'searchengineoptimizer' %}">SEO</a>
+            </div>
+        </div>
+        <form id="myform"method="POST">
+            {% csrf_token %}
+            <div>
+                Keyword : <input type="text", name="keyword", required/>
+                <input id="myinput" name="myinput" type="submit" onsubmit="return button1_click()">
+            </div>
+        </form>
+
+        <div>
+                <ul type = square>
+                <li>
+                    <h2>How can you use this website?</h2>
+                </li>
+
+                <ol>
+                    <li>
+                        <p>Type the keyword you want to analyze</p>
+                    </li>
+                    <li>
+                        <p>Type the word you want to know the ranking distribution in NAVER SHOPPING</p>
+                    </li>
+                    <li>
+                        <p>Wait for the process</p>
+                    </li>
+                </ol>
+            </ul>
+        </div>
+
+        <div style="width: 100%;">
+            <div id="chartContainer" style="height: 370px; width: 80%;"></div>
+            <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+            <script>printrr({{ff|safe}});</script>
+        </div>
+        <div>
+            <hr>
+            <footer>
+                <p>Posted by: Joshua Jeon</p>
+                <p><time pubdate datetime="2018-11-21"></time></p>
+            </footer>
+        </div>
+    </body>
+</html>
