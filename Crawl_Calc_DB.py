@@ -505,10 +505,10 @@ def naverapi():
 
 if __name__ == '__main__':
     connection = pymysql.connect(
-        host='j2jung.cafe24.com',
-        user='j2jung',
-        password='kE5!36cau1',
-        db='j2jung',
+        host='',
+        user='',
+        password='',
+        db='',
         charset='utf8',
     )
 
